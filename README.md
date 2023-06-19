@@ -5,4 +5,4 @@ Plotting surface plots using tikz/pgfplots with data coming from matlab has been
 It requires [export_fig](https://www.mathworks.com/matlabcentral/fileexchange/23629-export_fig/)
 
 
-![example](example/tikzpic.pdf)
+![example](example/tikzpic.png)

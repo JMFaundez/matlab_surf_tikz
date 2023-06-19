@@ -8,10 +8,6 @@
 *.synctex.gz
 *.auxlock
 Main.pdf
-tikz/*.dep
-tikz/*.dpth
-tikz/*.log
-tikz/*.md5
-tikz/*.pdf
+tikz/
 figures/*-eps-converted-to.pdf
 figures_tex/*-eps-converted-to.pdf
