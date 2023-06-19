@@ -1,5 +1,16 @@
-\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+\documentclass[convert={outext=.png}]{standalone}
 %\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+%\documentclass[a4paper]{article}
+
+%\usepackage{tikz}
+%\usetikzlibrary{external}
+%\tikzset{
+%  external/system call/.add=
+%  {}%
+%  {; convert -density 300 -transparent white "\image.pdf" "\image.png"},
+%  /pgf/images/external info,
+%}
+%\tikzexternalize[prefix=tikz/]
 \usepackage{pgfplots}
 \begin{document}
 \begin{tikzpicture}
