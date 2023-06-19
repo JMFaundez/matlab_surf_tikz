@@ -6,3 +6,6 @@ It requires [export_fig](https://www.mathworks.com/matlabcentral/fileexchange/23
 
 
 ![example](example/tikzpic.png)
+
+
+The tex file in the example also has the instructions to save to file a png or eps image instead of pdf.

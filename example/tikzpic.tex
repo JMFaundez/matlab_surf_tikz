@@ -1,17 +1,19 @@
-\documentclass[convert={outext=.png}]{standalone}
+%\documentclass[convert={outext=.png}]{standalone}
 %\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
-%\documentclass[a4paper]{article}
-
-%\usepackage{tikz}
-%\usetikzlibrary{external}
-%\tikzset{
-%  external/system call/.add=
-%  {}%
-%  {; convert -density 300 -transparent white "\image.pdf" "\image.png"},
-%  /pgf/images/external info,
-%}
-%\tikzexternalize[prefix=tikz/]
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzset{external/force remake} % otherwise will use external pdf if it exists
+\tikzset{
+  external/system call/.add=
+  {}%
+  {; pdftops -eps "\image.pdf"},
+  %{; convert -density 300 -transparent white "\image.pdf" "\image.png"},
+  /pgf/images/external info,
+}
+\tikzexternalize[prefix=tikz/]
 \usepackage{pgfplots}
+
 \begin{document}
 \begin{tikzpicture}
     \input{figures/matlab_test_axisvalues.tex}
