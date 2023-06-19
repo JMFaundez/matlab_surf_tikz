@@ -1,0 +1,31 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+    \input{figures/matlab_test_axisvalues.tex}
+    \begin{axis}[name=surfplot,
+        enlargelimits=false, 
+        ylabel=$y$,
+        xlabel= $x$,
+        axis on top, 
+        axis equal image,
+        width=10cm,
+        %xtick={1.05*\xmin,0.02,...,0.98*\xmax},
+        x tick label style={rotate=0},
+        yticklabel style={%
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=2,
+            },
+        ]
+    \addplot graphics [xmin=\xmin,xmax=\xmax,ymin=\ymin,ymax=\ymax] {figures/matlab_test.png};
+    \end{axis}
+
+    \begin{axis}[name=colorbar,enlargelimits=false, at={(surfplot.south east)} ,xshift=0.5cm,axis on top ,height=4.3cm,width=2cm,xticklabels={,,},xtick=\empty,axis y line*=right]
+
+    \addplot graphics [xmin=0.9, xmax=1,ymin=\cmin,ymax=\cmax] {figures/matlab_test_colorbar.png};
+    \end{axis}
+\end{tikzpicture}
+\end{document}
