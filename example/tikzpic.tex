@@ -1,4 +1,4 @@
-%\documentclass[convert={outext=.png}]{standalone}
+%\documentclass[convert={outext=.png}]{standalone} 
 %\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
 \documentclass[a4paper]{article}
 \usepackage{tikz}
@@ -7,8 +7,8 @@
 \tikzset{
   external/system call/.add=
   {}%
-  {; pdftops -eps "\image.pdf"},
-  %{; convert -density 300 -transparent white "\image.pdf" "\image.png"},
+  %{; pdftops -eps "\image.pdf"},
+  {; convert -density 300 -transparent white "\image.pdf" "\image.png"},
   /pgf/images/external info,
 }
 \tikzexternalize[prefix=tikz/]

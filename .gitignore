@@ -8,6 +8,7 @@
 *.synctex.gz
 *.auxlock
 Main.pdf
-tikz/
+*/tikz/*.md5
+*/tikz/*.dpth
 figures/*-eps-converted-to.pdf
 figures_tex/*-eps-converted-to.pdf
