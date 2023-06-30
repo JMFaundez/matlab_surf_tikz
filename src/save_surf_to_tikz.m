@@ -22,8 +22,8 @@ fclose(fileID);
 fname_colorbar = figname+"_colorbar";
 fig1=figure;
 axis off
-colormap(cmap);
 caxis([cmin, cmax]);
+colormap(cmap);
 % h = colorbar([0.1 0.1  0.8  0.7],...
 %   'location','Southoutside',...
 %   'XTick',[-1 -0.5 0 0.5 1] ...
